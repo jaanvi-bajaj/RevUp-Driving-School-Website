@@ -1,0 +1,219 @@
+/* Basic reset */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+
+body{
+  /* UPDATED: Simplified font */
+  font-family: "Inter", Arial, sans-serif;
+  background:#f8fafc;
+  color:#111827;
+  line-height:1.5;
+}
+/* Reusable container */
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 16px;
+}
+
+/* Header / nav */
+header{
+  background:#fff;
+  box-shadow:0 2px 6px rgba(15,23,42,0.06);
+  position:sticky;
+  top:0;
+  z-index:50; /* Keep on top */
+}
+.nav-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+}
+.brand{
+  color:#9333ea;
+  font-weight:700;
+  font-size:20px;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+}
+.brand i{margin-right:8px}
+
+/* Desktop nav links */
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{color:#374151;text-decoration:none;font-weight:500}
+.nav-links a.active{ /* Active link style */
+  color:#9333ea;
+  border-bottom:3px solid #9333ea;
+  padding-bottom:6px
+}
+/* 'Book Now' button */
+.cta{
+  background:#9333ea;
+  color:#fff;
+  padding:8px 18px;
+  border-radius:999px; /* Pill shape */
+  text-decoration:none;
+  font-weight:600
+}
+.cta:hover{background:#6b21a8}
+.menu-btn{background:none;border:0;font-size:20px}
+
+/* mobile menu */
+.mobile-menu{
+  display:none; /* Hidden by default */
+  padding:10px 0;
+  border-top:1px solid #eee
+}
+.mobile-menu a{display:block;padding:8px 0;color:#374151;text-decoration:none}
+.mobile-menu a.active{color:#9333ea;font-weight:600}
+
+/* Hero */
+.hero{
+  background:linear-gradient(90deg,#9333ea,#ec4899); /* Gradient */
+  color:#fff;
+  padding:60px 0;
+  text-align:center
+}
+.hero h1{font-size:34px;margin:0 0 12px;line-height:1.05}
+.hero p{color:rgba(255,255,255,0.85);max-width:820px;margin:0 auto 18px}
+.hero .btn{
+  background:#fff;
+  color:#9333ea;
+  padding:12px 24px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  display:inline-block
+}
+
+
+/* Sections (my "pages") */
+/* THIS IS THE UPDATED PART - NO MORE "display:none" */
+section{
+  padding:40px 0;
+  background:#fff;
+  margin-bottom:12px
+}
+
+/* Two column layout */
+.two-col{display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+.col-left{flex:1;min-width:280px}
+.col-right{flex:1;min-width:280px}
+img.responsive{width:100%;height:auto;border-radius:10px;display:block;object-fit:cover}
+
+/* Testimonials */
+.grid-3{display:grid;grid-template-columns:repeat(1,1fr);gap:18px}
+@media(min-width:760px){.grid-3{grid-template-columns:repeat(3,1fr)}} /* 3 cols on desktop */
+.card{
+  background:#fff;
+  padding:18px;
+  border-radius:10px;
+  /* UPDATED: Simpler shadow */
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  text-align:center
+}
+.avatar{
+  width:96px;
+  height:96px;
+  border-radius:50%; /* Circle */
+  display:block;
+  margin:0 auto 10px;
+  border:4px solid rgba(147,51,234,0.12)
+}
+/* my circular frame */
+.owner-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* This makes it a circle */
+  object-fit: cover;
+  margin: 10px auto;
+  border: 4px solid #e9d5ff;
+}
+
+/* FAQ */
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border:1px solid #e6e6e6;border-radius:8px;overflow:hidden;margin-bottom:10px;background:#fff}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:14px;cursor:pointer}
+.faq-q h4{margin:0;font-weight:600}
+.faq-a{padding:0 14px;max-height:0;overflow:hidden;transition:max-height .25s ease}
+.faq-a.open{ /* This class gets added by JS */
+  padding:12px 14px 16px;
+  max-height:300px;
+  color:#6b7280
+}
+
+/* Packages */
+.packages{display:grid;gap:18px}
+@media(min-width:760px){.packages{grid-template-columns:repeat(3,1fr)}}
+.pkg{
+  background:#fff;
+  border-radius:10px;
+  overflow:hidden;
+  /* UPDATED: Simpler shadow */
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition:transform .18s
+}
+.pkg:hover{transform:translateY(-6px)} /* Move up on hover */
+.pkg .pkg-head{padding:18px}
+.badge{position:relative}
+.badge .label{position:absolute;top:0;left:12px;background:#9333ea;color:#fff;padding:6px 12px;border-radius:0 0 8px 8px;font-weight:700}
+.pkg img{width:100%;height:180px;object-fit:cover;display:block}
+.pkg h3{margin:0 0 6px;color:#9333ea}
+.pkg .price{font-size:28px;font-weight:700;margin-bottom:8px}
+.pkg ul{padding-left:16px;color:#6b7280;margin-bottom:14px}
+
+/* Booking form */
+.form-wrap{background:#f3f4f6;padding:18px;border-radius:10px}
+form .row{display:flex;gap:12px;flex-wrap:wrap}
+.field{flex:1;min-width:160px;margin-bottom:12px}
+label{display:block;margin-bottom:6px;color:#374151;font-weight:600}
+input[type="text"], select{
+  width:100%;
+  padding:10px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  outline:none
+}
+input[type="text"]:focus, select:focus{box-shadow:0 0 0 3px rgba(147,51,234,0.08)} /* Purple glow */
+.price-box{background:rgba(147,51,234,0.06);padding:12px;border-left:6px solid #9333ea;border-radius:6px;margin-bottom:12px}
+.error{ /* Error message box */
+  background:#fee2e2;
+  border:1px solid #fecaca;
+  color:#991b1b;
+  padding:10px;
+  border-radius:8px;
+  margin-bottom:12px;
+  display:none /* Hidden by default */
+}
+button.primary{background:#9333ea;color:#fff;border:0;padding:12px;border-radius:8px;width:100%;font-weight:700}
+button.primary:hover{background:#6b21a8}
+
+/* Confirmation */
+.confirm{padding:40px 0;text-align:center;background:#fff}
+.confirm .tick{font-size:72px;color:#10b981;margin-bottom:12px} /* Green check */
+
+/* Footer */
+footer{background:#111827;color:#fff;padding:28px 0;margin-top:18px}
+footer p{margin:6px 0;color:rgba(255,255,255,0.8)}
+.socials a{
+  color:rgba(255,255,255,0.8);
+  margin:0 8px;
+  font-size:20px;
+  text-decoration:none;
+  transition: color 0.2s ease;
+}
+/* ==== NEW HOVER EFFECT ==== */
+.socials a:hover {
+  color: #fff; /* White on hover */
+}
+
+/* Responsive stuff */
+@media(max-width:760px){
+  .nav-links{display:none} /* Hide desktop nav */
+  .cta{display:none} /* Hide desktop button */
+  .menu-btn{display:block} /* Show mobile button */
+  .two-col{flex-direction:column} /* Stack columns */
+  .hero h1{font-size:26px}
+}
