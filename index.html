@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RevUp Driving School - Home</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container nav-row">
+      <a href="index.html" class="brand logo"><i class="fas fa-car-side"></i>RevUp Driving School</a>
+      
+      <nav class="nav-links" id="desktopNav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="booking.html" class="nav-link">Booking</a>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:10px">
+        <a href="booking.html" class="cta">Book Now</a>
+        <button class="menu-btn" id="menu-btn" aria-label="menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+
+    <div class="container mobile-menu" id="mobile-nav">
+      <a href="index.html" class="mobile-link active">Home</a>
+      <a href="packages.html" class="mobile-link">Packages</a>
+      <a href="booking.html" class="mobile-link">Booking</a>
+    </div>
+  </header>
+
+  <main class="container" id="mainContent">
+
+    <section id="page-home">
+      <div class="hero">
+        <h1>Start Your Safe Driving Journey Today</h1>
+        <p>Join thousands of confident drivers who started with us.</p>
+        <a href="packages.html" class="btn">Explore Packages</a>
+      </div>
+
+      <div style="background:#fff;padding:36px 0">
+        <div class="two-col">
+          <div class="col-left">
+            <h2 style="margin-top:0; font-size: 28px;">Our History & Expert Instructors</h2>
+            <p style="color:#6b7280">Started 10 years ago, RevUp's mission is to make roads safer, one driver at a time. We believe driving is a skill for life.</p>
+            
+            <div style="text-align:center; margin-top:20px; background:#faf5ff; padding:15px; border-radius:8px;">
+              <img src="owner.jpeg" alt="Jaanvi Bajaj" class="owner-avatar">
+              <h4 style="color:#9333ea; margin:5px 0 0 0;">Jaanvi Bajaj</h4>
+              <p style="color:#6b7280; margin:0; font-weight:600;">Founder & Owner</p>
+            </div>
+            </div>
+          <div class="col-right">
+            <img class="responsive" src="https://images.pexels.com/photos/9518029/pexels-photo-9518029.jpeg" alt="Instructors">
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:36px 0;background:#faf5ff">
+        <h2 style="text-align:center;margin:0 0 18px">What Our Students Say</h2>
+        <div class="grid-3">
+          <div class="card">
+            <img class="avatar" src="https://placehold.co/100x100/E9D5FF/333333?text=Sarah+A." alt="Sarah A.">
+            <p style="font-style:italic;color:#6b7280">"I passed my test on the first try!"</p>
+            <h4 style="color:#9333ea;margin-top:8px">Sarah A.</h4>
+          </div>
+          <div class="card">
+            <img class="avatar" src="https://placehold.co/100x100/FBCFE8/333333?text=Omar+K." alt="Omar K.">
+            <p style="font-style:italic;color:#6b7280">"The Advanced Package was worth it."</p>
+            <h4 style="color:#9333ea;margin-top:8px">Omar K.</h4>
+          </div>
+          <div class="card">
+            <img class="avatar" src="https://placehold.co/100x100/C9A7EB/333333?text=Fatima+M." alt="Fatima M.">
+            <p style="font-style:italic;color:#6b7280">"Took the Refresher Course. Perfect boost."</p>
+            <h4 style="color:#9333ea;margin-top:8px">Fatima M.</h4>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:36px 0;background:#fff">
+        <h2 style="text-align:center;margin-bottom:12px">Frequently Asked Questions</h2>
+        <div class="faq-list" id="faq-list">
+          <div class="faq-item">
+            <div class="faq-q"><h4>How long does each lesson last?</h4><i class="fas fa-chevron-down"></i></div>
+            <div class="faq-a"><p>Each in-car driving lesson is 60 minutes long.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><h4>Do I need a learner's permit to start?</h4><i class="fas fa-chevron-down"></i></div>
+            <div class="faq-a"><p>Yes, you must have a valid learner's permit before you can begin in-car lessons.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q"><h4>Can I use the school's car for my road test?</h4><i class="fas fa-chevron-down"></i></div>
+            <div class="faq-a"><p>Yes, this is included in the Advanced Package and can be added to other packages.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="text-align:center">
+      <p style="font-weight:600">&copy; 2025 RevUp Driving School.</p>
+      <p style="color:rgba(255,255,255,0.75)"><i class="fas fa-map-marker-alt" style="margin-right:8px"></i>123 Business Avenue, Sheikh Zayed Road, Dubai, UAE</p>
+      <p style="color:rgba(255,255,255,0.75)"><i class="fas fa-mobile-alt" style="margin-right:8px"></i>Call Us: +971 56 746 3160</p>
+      <div class="socials" style="margin-top:12px">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

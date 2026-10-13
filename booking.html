@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RevUp Driving School - Booking</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container nav-row">
+      <a href="index.html" class="brand logo"><i class="fas fa-car-side"></i>RevUp Driving School</a>
+      
+      <nav class="nav-links" id="desktopNav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="packages.html" class="nav-link">Packages</a>
+        <a href="booking.html" class="nav-link active">Booking</a>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:10px">
+        <a href="booking.html" class="cta">Book Now</a>
+        <button class="menu-btn" id="menu-btn" aria-label="menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+
+    <div class="container mobile-menu" id="mobile-nav">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="packages.html" class="mobile-link">Packages</a>
+      <a href="booking.html" class="mobile-link active">Booking</a>
+    </div>
+  </header>
+
+  <main class="container" id="mainContent">
+
+    <section id="page-booking">
+      <div style="padding:36px 0">
+        <div style="max-width:820px;margin:0 auto">
+          <h2 style="text-align:center">Book Your Package</h2>
+          <p style="text-align:center;color:#6b7280;margin-bottom:12px">Secure your spot today.</p>
+
+          <div style="text-align:center; padding: 12px; background: #faf5ff; border-radius: 8px; margin-bottom: 18px; color: #6b7280; border: 1px solid #e9d5ff;">
+            <p style="margin:0; font-weight: 600; color: #111827; font-size: 1.1em;">Have Questions?</p>
+            <p style="margin: 4px 0 0; font-size: 1.05em;">Call us: <a href="tel:+971579461360" style="color:#9333ea; font-weight: 600; text-decoration: none;">+971 56 646 3691</a></p>
+            <p style="margin: 4px 0 0; font-size: 1.05em;">Email: <a href="mailto:bookings@revup.ae" style="color:#9333ea; font-weight: 600; text-decoration: none;">bookings@revup.ae</a></p>
+          </div>
+          
+          <div id="error-msg" class="error">Please fill out all required fields.</div>
+
+          <div class="form-wrap">
+            <form id="book-form">
+              <div class="row">
+                <div class="field">
+                  <label for="firstName">First Name</label>
+                  <input id="firstName" name="firstName" type="text" required>
+                </div>
+                <div class="field">
+                  <label for="lastName">Last Name</label>
+                  <input id="lastName" name="lastName" type="text" required>
+                </div>
+              </div>
+
+              <div style="margin-bottom:12px">
+                <label for="pkg-select">Choose a Package</label>
+                <select id="pkg-select" name="packageSelect" required>
+                  <option value="">-- Select a Package --</option>
+                  <option value="1835" data-name="Beginner's Package">Beginner's Package - 1,835 AED</option>
+                  <option value="3300" data-name="Advanced Package">Advanced Package - 3,300 AED</option>
+                  <option value="920" data-name="Refresher Course">Refresher Course - 920 AED</option>
+                </select>
+              </div>
+
+              <div class="price-box">
+                <strong>Total Price: </strong><span id="price-display">0.00 AED</span>
+              </div>
+
+              <h3 style="margin-top:6px">Payment Information</h3>
+
+              <div class="row">
+                <div class="field">
+                  <label for="creditCard">Credit Card Number</label>
+                  <input id="creditCard" name="creditCard" type="text" placeholder="•••• •••• •••• ••••" required>
+                </div>
+              </div>
+              <div class="row">
+                <div style="flex:1;min-width:100px"><label for="expMonth">MM</label><input id="expMonth" name="expMonth" maxlength="2" placeholder="MM" type="text" required></div>
+                <div style="flex:1;min-width:100px"><label for="expYear">YY</label><input id="expYear" name="expYear" maxlength="2" placeholder="YY" type="text" required></div>
+                <div style="flex:2;min-width:140px"><label for="cvv">CVV</label><input id="cvv" name="cvv" maxlength="4" placeholder="123" type="text" required></div>
+              </div>
+
+              <div style="margin-top:12px">
+                <button class="primary" type="submit">Submit Booking</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="text-align:center">
+      <p style="font-weight:600">&copy; 2025 RevUp Driving School.</p>
+      <p style="color:rgba(255,255,255,0.75)"><i class="fas fa-map-marker-alt" style="margin-right:8px"></i>123 Business Avenue, Sheikh Zayed Road, Dubai, UAE</p>
+      <p style="color:rgba(255,255,255,0.75)"><i class="fas fa-mobile-alt" style="margin-right:8px"></i>Call Us: +971 56 176 3860</p>
+      <div class="socials" style="margin-top:12px">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
